@@ -1,4 +1,4 @@
-package com.sw.rssnews;
+package com.rssnews;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -17,12 +17,10 @@ import com.sw.rssnews.fragment.Fragment1;
 
 
 public class   MainActivity extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-
     FragmentTransaction fragmentTransaction;
     NavigationView navigationView;
-
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +46,7 @@ public class   MainActivity extends AppCompatActivity {
             }
         };
 
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        drawerLayout.addDrawerListener((actionBarDrawerToggle));
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         replaceFragment(0);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -83,11 +81,8 @@ public class   MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return  super.onOptionsItemSelected(item);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return actionBarDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     @Override
