@@ -25,11 +25,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class ReadABC extends AsyncTask<Void,Void,Void> {
     public String address;
-    Context context;
-    ProgressDialog progressDialog;
-    URL url;
-    ArrayList<FeedItem> feedItems;
-    RecyclerView recyclerView;
+    private Context context;
+    private ProgressDialog progressDialog;
+    private URL url;
+    private ArrayList<FeedItem> feedItems;
+    private RecyclerView recyclerView;
 
     public ReadABC(Context context, RecyclerView recyclerView){
         this.recyclerView = recyclerView;
@@ -101,8 +101,7 @@ public class ReadABC extends AsyncTask<Void,Void,Void> {
             InputStream inputStream =connection.getInputStream();
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
-            Document xmlDoc =  builder.parse(inputStream);
-            return xmlDoc;
+            return builder.parse(inputStream);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

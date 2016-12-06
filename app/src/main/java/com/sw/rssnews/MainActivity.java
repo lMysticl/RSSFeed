@@ -17,8 +17,8 @@ import com.sw.rssnews.fragment.Fragment1;
 
 
 public class   MainActivity extends AppCompatActivity {
-    FragmentTransaction fragmentTransaction;
-    NavigationView navigationView;
+    private FragmentTransaction fragmentTransaction;
+    private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
 

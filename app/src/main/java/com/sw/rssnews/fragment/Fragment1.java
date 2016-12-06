@@ -11,8 +11,8 @@ import com.sw.rssnews.R;
 import com.sw.rssnews.ReadABC;
 
 public class Fragment1 extends Fragment {
-    RecyclerView recyclerView;
-    final static public String address="http://feeds.abcnews.com/abcnews/usheadlines";
+    private  RecyclerView recyclerView;
+    public final static  String address="http://feeds.abcnews.com/abcnews/usheadlines";
 
     public Fragment1() {
         // Required empty public constructor

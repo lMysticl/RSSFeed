@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    ArrayList<FeedItem> feedItems;
-    Context context;
+    private ArrayList<FeedItem> feedItems;
+    private Context context;
 
     public MyAdapter(Context context,ArrayList<FeedItem> feedItems){
         this.feedItems = feedItems;
